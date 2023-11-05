@@ -683,7 +683,7 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    max-width: 85%;
   }
 }
 .row {
@@ -702,6 +702,18 @@ progress {
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   /* margin-top: var(--bs-gutter-y); */
+}
+#main_container {
+  min-width: 80% !important;
+  object-fit: cover;
+}
+#performances_container {
+  margin: 0;
+  width: 100%;
+  min-width: 70%;
+}
+#performances {
+  overflow-x: hidden;
 }
 
 .col {
@@ -8476,6 +8488,66 @@ textarea.form-control-lg {
   visibility: hidden !important;
 }
 
+@media (max-width: 575px) {
+  #program_row {
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+    word-wrap: normal;
+    padding-inline: 2px;
+  }
+  #songTitle, #songComposer, #dottedLine {
+    display: inline;
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  #campInfo {
+    font-size: x-small;
+    display: inline;
+  }
+  .h3 {
+    font-size: small;
+  }
+}
+
+@media (min-width: 1200px) {
+  #program_row {
+    font-size: 2rem;
+    min-height: 3rem;
+    align-items: center;
+  }
+  #songTitle, #songComposer, #dottedLine {
+    display: inline;
+    font-size: 2rem;
+    max-width: 60%;
+  }
+  .prev, .next, .slide_dot {
+    font-size: 5rem !important;
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  #mainNav {
+    min-height: 20rem;
+    font-size: 2.5rem;
+  }
+  .navbar-brand {
+    font-size: 2.5rem;
+  }
+  .camps-section {
+    min-height: 1700px;
+  }
+  #camps_container {
+    min-height: 80%;
+    min-width: 80%;
+  }
+}
+
+.program-section {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -11211,6 +11283,9 @@ body {
     visibility: hidden;
     overflow: hidden !important;
   }
+  #printBtn {
+    visibility: hidden;
+  }
   .camps-section {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important; 
@@ -11255,6 +11330,10 @@ body {
   background-image: url(../images/camps_background.png), linear-gradient(to bottom, rgb(239,187,124), rgb(224,130,108), rgb(197,82,62));
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-position-x: center;
+  background-position-y: top;
+  height: 100%;
 }
 
 .mySlides {

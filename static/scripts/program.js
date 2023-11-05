@@ -263,9 +263,9 @@ function loadProgram() {
     var text = `<div class="mySlides" name="${num_dots} slide">`;
     program.forEach(record => {
         text += `<div id="program_row" name="${count} top" class="row gx-4 gx-lg-5 pt-4 ps-4 pe-4 justify-content-between">`;
-        text += `<div class="col-auto text-black">${record.title}</div>`;
-        text += `<div class="col dot"></div>`;
-        text += `<div class="col-auto text-black">${record.composer}</div></div>`;
+        text += `<div id="songTitle" class="col-auto text-black">${record.title}</div>`;
+        text += `<div id="dottedLine" class="col dot"></div>`;
+        text += `<div id="songComposer" class="col-auto text-black">${record.composer}</div></div>`;
         text += `<div id="program_row" name=${i} class="row gx-4 gx-lg-5 text-black-50 justify-content-center">${record.performer}</div>`;
         if (count % 8 == 0) {
             text += '</div>'
