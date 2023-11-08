@@ -251,33 +251,61 @@ function currentSlide(n) {
 }
 
 function loadProgram() {
+    // load prev and next buttons and slide number dots
     let prevBtn = document.getElementsByClassName("prev")[0];
     let nextBtn = document.getElementsByClassName("next")[0];
     let dots =  document.getElementsByClassName("slide_dot");
+    
+    // make them visible
     prevBtn.style.visibility = "visible";
     nextBtn.style.visibility = "visible";
     for (d = 0; d < dots.length; d++) { dots[d].style.visibility = "visible"; };
+
+    // determine padding based on window size
+    var paddingBottom = "pb-5";
+    var paddingTop = "pt-5";
+    if (window.innerWidth < 575) {
+        btnPadding = "8px";
+        prevBtn.style.padding = "8px";
+        nextBtn.style.padding = "8px";
+        paddingBottom = "pb-3";
+        paddingTop = "pt-3";
+    }
+        
     var i = 0;
     var count = 1;
     let num_dots = 1;
+
+    // start slide div
     var text = `<div class="mySlides" name="${num_dots} slide">`;
+
     program.forEach(record => {
+        // add first row with song title, dotted line, and composer
         text += `<div id="program_row" name="${count} top" class="row gx-4 gx-lg-5 pt-4 ps-4 pe-4 justify-content-between">`;
         text += `<div id="songTitle" class="col-auto text-black">${record.title}</div>`;
         text += `<div id="dottedLine" class="col dot"></div>`;
         text += `<div id="songComposer" class="col-auto text-black">${record.composer}</div></div>`;
+        // add second row with performer name and instrument
         text += `<div id="program_row" name=${i} class="row gx-4 gx-lg-5 text-black-50 justify-content-center">${record.performer}</div>`;
+        
+        // if container is full, close slide div
         if (count % 8 == 0) {
             text += '</div>'
             performances_container.innerHTML += text;
+            // add bottom padding to last row
             let row = document.getElementsByName(`${i}`)[0];
-            row.classList.add("pb-5");
+            row.classList.add(paddingBottom);
             num_dots += 1
+            // start new slide div
             text = `<div class="mySlides" name="${num_dots} slide">`;
         } 
+
+        // if whole program is loaded, close slide div
         else if (count == program.length) {
             text += '</div>'
             performances_container.innerHTML += text;
+
+            // add missing rows to make container same size as others
             let missingRows = 8 - (program.length % 8);
             var slide = document.getElementsByName(`${num_dots} slide`)[0];
             for (i = 0; i < missingRows; i++) {
@@ -289,18 +317,21 @@ function loadProgram() {
                 slide.innerHTML += text;
             };
             var slide = document.getElementsByName(`missing row ${missingRows}`)[0];
-            slide.classList.add("pb-5");
+            slide.classList.add(paddingBottom);
         }
         i += 1;
         count += 1
     });
+
+    // add slide number dots based on total number of slides
     text = `<div style="text-align:center">`;
     let top_rows = [1, 9, 17, 25, 33];
     for (j = 1; j <= num_dots; j++) {
         text += `<span class="slide_dot" onclick="currentSlide(${j})"></span>`
+        // add top padding to top rows
         let row = document.getElementsByName(`${top_rows[j - 1]} top`)[0];
         row.classList.remove("pt-4");
-        row.classList.add("pt-5");
+        row.classList.add(paddingTop);
     };   
     text += '</div>';
     performances.innerHTML += text;

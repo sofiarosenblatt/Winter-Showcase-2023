@@ -338,7 +338,7 @@ progress {
 .dot{
   border-bottom: dotted 3px black;
   position: relative;
-  height: 12px;
+  height: 7px;
 }
 
 .lead {
@@ -8330,14 +8330,17 @@ textarea.form-control-lg {
 @media (max-width: 575px) {
   #program_row {
     display: flex;
-    flex-direction: column;
-    font-size: small;
+    flex-direction: row;
+    font-size: xx-small;
     word-wrap: normal;
-    padding-inline: 2px;
+    padding-left: 0.2px !important;
+    padding-right: 0.2px !important;
+    line-height: 0.5rem;
+    white-space: pre-line;
   }
   #songTitle, #songComposer, #dottedLine {
-    display: inline;
-    line-height: 1rem;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 0.5rem;
   }
   #campInfo {
@@ -8347,17 +8350,28 @@ textarea.form-control-lg {
   .h3 {
     font-size: small;
   }
+  .dot {
+    border-width: 2px;
+  }
+}
+
+#songTitle {
+  max-width: 45%;
+  text-align: left;
+}
+#songComposer {
+  max-width: 45%;
+  text-align: center;
 }
 
 @media (min-width: 1200px) {
   #program_row {
-    font-size: 2rem;
+    font-size: x-large;
     min-height: 3rem;
-    align-items: center;
   }
   #songTitle, #songComposer, #dottedLine {
     display: inline;
-    font-size: 2rem;
+    font-size: x-large;
     max-width: 60%;
   }
   .prev, .next, .slide_dot {
@@ -8378,6 +8392,20 @@ textarea.form-control-lg {
   #camps_container {
     min-height: 80%;
     min-width: 80%;
+  }
+}
+
+@media (min-width: 2500px) {
+  #program_row {
+    font-size: 50px;
+    min-height: 100px;
+  }
+  #songTitle, #songComposer, #dottedLine {
+    font-size: 50px;
+  }
+  #performancesLabel {
+    max-height: 20rem;
+    max-width: 40rem;
   }
 }
 
@@ -11120,45 +11148,45 @@ body {
     print-color-adjust: exact !important; 
     margin: 0;
     padding: 0;
-    height: 100%;
-    background-attachment: scroll;
+    min-height: 100% !important;
+    background-attachment: local;
+    background-size: cover;
     page-break-inside: avoid;
     page-break-before: avoid;
-    overflow: hidden !important;
+    page-break-after: always;
   }
   .prev, .next, .slide_dot {
     display: none !important;
     visibility: hidden;
     overflow: hidden !important;
   }
-  #printBtn {
-    visibility: hidden;
-  }
-  .camps-section {
+  /* .camps-section {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important; 
     page-break-inside: avoid;
     page-break-before: avoid;
+    page-break-after: avoid !important;
     display: flex;
     flex-direction: row;
     margin: 0;
     padding: 0;
     background-size: cover !important;
+    max-height: 100% !important;
   }
   #camps_container {
     display: flex;
     flex-direction: column;
   }
   #camps_container>div {
-    width: 100%;
-    height: auto;
-  }
+    max-height: 100%;
+  } */
 }
 
 #program_row {
   background-color: #fbfbfb;
   user-select: none !important;
   -webkit-user-select: none;
+  align-items: center;
 }
 
 #home_row {
@@ -11172,16 +11200,7 @@ body {
 }
 
 .camps-section {
-  padding-top: 5rem;
-  margin-bottom: 0;
-  padding-top: 80px;
-  background-image: url(../images/camps_background.png), linear-gradient(to bottom, rgb(239,187,124), rgb(224,130,108), rgb(197,82,62));
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position-x: center;
-  background-position-y: top;
-  height: 100%;
+  margin: 0px;
 }
 
 .mySlides {
