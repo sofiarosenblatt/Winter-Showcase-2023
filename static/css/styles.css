@@ -8329,7 +8329,8 @@ textarea.form-control-lg {
 
 @media (max-width: 575px) {
   .home-section {
-    background-size: 100% auto;
+    background-size: cover;
+    background-attachment: fixed;
   }
   #program_row {
     display: flex;
