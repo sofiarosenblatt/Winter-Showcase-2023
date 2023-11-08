@@ -8328,6 +8328,9 @@ textarea.form-control-lg {
 }
 
 @media (max-width: 575px) {
+  .home-section {
+    background-size: 100% auto;
+  }
   #program_row {
     display: flex;
     flex-direction: row;
@@ -11160,26 +11163,6 @@ body {
     visibility: hidden;
     overflow: hidden !important;
   }
-  /* .camps-section {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important; 
-    page-break-inside: avoid;
-    page-break-before: avoid;
-    page-break-after: avoid !important;
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-    padding: 0;
-    background-size: cover !important;
-    max-height: 100% !important;
-  }
-  #camps_container {
-    display: flex;
-    flex-direction: column;
-  }
-  #camps_container>div {
-    max-height: 100%;
-  } */
 }
 
 #program_row {
