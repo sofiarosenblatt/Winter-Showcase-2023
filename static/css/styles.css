@@ -12,6 +12,134 @@
   --bs-winter-deep-green: #3b3c32;
 }
 
+@media (max-width: 850px) {
+  .navbar-toggler {
+    padding: 5px !important;
+    max-height: 30px;
+  }
+}
+
+@media (max-width: 300px) {
+  .navbar-brand {
+    font-size: small !important;
+    max-width: 40%;
+  }
+  .navbar-toggler {
+    font-size: x-small !important;
+  }
+
+}
+
+@media (max-width: 575px) {
+  .home-section {
+    background-size: 100% auto !important;
+    background-image: url(../images/home-page-vertical-2.jpeg) !important;
+    background-color: rgba(254, 254, 254, 0.2);
+    background-blend-mode: color;
+  }
+  #navbar_items_container {
+    align-items: start;
+    text-align: start;
+  }
+  #program_row {
+    display: flex;
+    flex-direction: row;
+    font-size: xx-small;
+    word-wrap: normal;
+    padding-left: 0.2px !important;
+    padding-right: 0.2px !important;
+    line-height: 0.5rem;
+    white-space: pre-line;
+  }
+  #songTitle, #songComposer, #dottedLine {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+  }
+  #campInfo {
+    font-size: x-small;
+    display: inline;
+  }
+  .h3 {
+    font-size: small;
+  }
+  .dot {
+    border-width: 2px;
+  }
+}
+
+#songTitle {
+  max-width: 45%;
+  text-align: left;
+}
+#songComposer {
+  max-width: 45%;
+  text-align: center;
+}
+
+@media (min-width: 1200px) {
+  #program_row {
+    font-size: x-large;
+    min-height: 3rem;
+  }
+  #songTitle, #songComposer, #dottedLine {
+    display: inline;
+    font-size: x-large;
+    max-width: 60%;
+  }
+  .prev, .next, .slide_dot {
+    font-size: 5rem !important;
+    min-height: 2rem;
+    min-width: 2rem;
+  }
+  #mainNav {
+    min-height: 20rem;
+    font-size: 2rem !important;
+  }
+  .navbar-brand {
+    font-size: 2rem !important;
+  }
+  .camps-section {
+    min-height: 1700px;
+  }
+  #camps_container {
+    min-height: 80%;
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 2500px) {
+  #program_row {
+    font-size: 50px;
+    min-height: 100px;
+  }
+  #songTitle, #songComposer, #dottedLine {
+    font-size: 50px;
+  }
+  #performancesLabel {
+    max-height: 20rem;
+    max-width: 40rem;
+  }
+  #mainNav {
+    min-height: 200px !important;
+    font-size: 4rem !important;
+  }
+  .navbar-brand {
+    font-size: 4rem !important;
+  }
+}
+
+.program-section {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.home-section {
+  background-color: rgba(254, 254, 254, 0.1);
+  background-blend-mode: color;
+}
+
 *,
 *::before,
 *::after {
@@ -8327,98 +8455,6 @@ textarea.form-control-lg {
   visibility: hidden !important;
 }
 
-@media (max-width: 575px) {
-  .home-section {
-    background-size: cover;
-    background-attachment: fixed;
-  }
-  #program_row {
-    display: flex;
-    flex-direction: row;
-    font-size: xx-small;
-    word-wrap: normal;
-    padding-left: 0.2px !important;
-    padding-right: 0.2px !important;
-    line-height: 0.5rem;
-    white-space: pre-line;
-  }
-  #songTitle, #songComposer, #dottedLine {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 0.5rem;
-  }
-  #campInfo {
-    font-size: x-small;
-    display: inline;
-  }
-  .h3 {
-    font-size: small;
-  }
-  .dot {
-    border-width: 2px;
-  }
-}
-
-#songTitle {
-  max-width: 45%;
-  text-align: left;
-}
-#songComposer {
-  max-width: 45%;
-  text-align: center;
-}
-
-@media (min-width: 1200px) {
-  #program_row {
-    font-size: x-large;
-    min-height: 3rem;
-  }
-  #songTitle, #songComposer, #dottedLine {
-    display: inline;
-    font-size: x-large;
-    max-width: 60%;
-  }
-  .prev, .next, .slide_dot {
-    font-size: 5rem !important;
-    min-height: 2rem;
-    min-width: 2rem;
-  }
-  #mainNav {
-    min-height: 20rem;
-    font-size: 2.5rem;
-  }
-  .navbar-brand {
-    font-size: 2.5rem;
-  }
-  .camps-section {
-    min-height: 1700px;
-  }
-  #camps_container {
-    min-height: 80%;
-    min-width: 80%;
-  }
-}
-
-@media (min-width: 2500px) {
-  #program_row {
-    font-size: 50px;
-    min-height: 100px;
-  }
-  #songTitle, #songComposer, #dottedLine {
-    font-size: 50px;
-  }
-  #performancesLabel {
-    max-height: 20rem;
-    max-width: 40rem;
-  }
-}
-
-.program-section {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-}
-
 @media (min-width: 576px) {
   .float-sm-start {
     float: left !important;
@@ -10973,7 +11009,6 @@ body {
 #mainNav .navbar-brand {
   color: rgba(255, 255, 255, 0.5);
   font-weight: 700;
-  padding: 0.9rem 0;
 }
 #mainNav .navbar-nav .nav-item:hover {
   color: fade(#fff, 80%);
@@ -11102,6 +11137,8 @@ body {
   background-attachment: fixed;
   user-select: none !important;
   -webkit-user-select: none;
+  -webkit-backface-visibility: hidden !important;
+  backface-visibility: hidden !important;
 }
 
 .home-section {
@@ -11111,7 +11148,7 @@ body {
   background-image: url(../images/home-page-horizontal.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; 
   display: grid;
 }
 
@@ -11120,7 +11157,6 @@ body {
 }
 
 .home-container {
-  /* margin-top: 5rem; */
   padding-bottom: 10%;
   padding-top: 10%;
   object-fit: contain;
@@ -11153,11 +11189,16 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100% !important;
-    background-attachment: local;
+    background-attachment: scroll;
     background-size: cover;
     page-break-inside: avoid;
     page-break-before: avoid;
     page-break-after: always;
+  }
+  #performances_container {
+    min-height: 70rem;
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
   }
   .prev, .next, .slide_dot {
     display: none !important;
@@ -11171,6 +11212,9 @@ body {
   user-select: none !important;
   -webkit-user-select: none;
   align-items: center;
+  border-color: transparent;
+  border-width: 0px;
+  font-family: Raleway;
 }
 
 #home_row {
