@@ -22,7 +22,7 @@
         <!-- Home -->
         <div class="home-section justify-content-center" id="home-section">
             <div class="home-container container justify-content-center" id="home-container">
-                <img id="home_img" src="./static/images/home-page-info.png"></img>
+                <img id="home_img" src="./static/images/home-page-monday.png"></img>
             </div>
         </div>
         <div class="container my-5"></div>
@@ -30,6 +30,11 @@
         <!-- Performances -->
         <section class="program-section text-center" id="performances">
             <img id="performancesLabel" src="./static/images/performances.png" style="width: 50%; height: 50%;"></img>
+            <div style="text-align:center">
+                <span class="slide_dot" onclick="currentSlide(1)"></span>
+                <span class="slide_dot" onclick="currentSlide(2)"></span>
+                <span class="slide_dot" onclick="currentSlide(3)"></span>
+            </div>
             <div id="main_container" class="container justify-content-between d-inline-flex align-items-center" style="padding: 0;">
                 <!-- Previous button -->
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -37,23 +42,27 @@
                 <!-- Next button -->
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
+            <div class="container mb-5 align-items-center justify-content-center">
+                <a id="print_btn" href="https://drive.google.com/file/d/1wCmg8Xyg5rfHlG85b5WwiOxR22B9pdWh/view?usp=share_link"></a>
+            </div>
         </section>
 
         <!-- Camps -->
         <section id="camps" class="camps-section text-center">
             <div class="container my-5"></div>
             <div class="justify-content-center align-items-center" id="camps_container" style="padding: 0; margin: 0; width: 100%;">
-                <img src="./static/images/be-a-hero.png" style="margin: 0; padding: 0; object-fit: cover; width: 100%;"></img>
+                <img src="./static/images/be-a-hero.pdf" style="margin: 0; padding: 0; object-fit: cover; width: 100%;"></img>
             </div> 
             <div class="justify-content-center align-items-center" id="camps_container" style="padding: 0; margin: 0; width: 100%;">
                 <div class="container py-4"></div>
             </div> 
             <div class="justify-content-center align-items-center" id="camps_container" style="padding: 0; margin: 0; width: 100%;">
-                <img src="./static/images/music-production.png" style="margin: 0; padding: 0; object-fit: cover; width: 100%;"></img>
+                <img src="./static/images/music-production.pdf" style="margin: 0; padding: 0; object-fit: cover; width: 100%;"></img>
             </div> 
         </section>
 
         <script src="./static/scripts/program.js"></script>
+        <link id="print_link" href="https://drive.google.com/file/d/1wCmg8Xyg5rfHlG85b5WwiOxR22B9pdWh/view?usp=share_link"></link>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

@@ -11133,7 +11133,7 @@ body {
   padding-top: 5rem;
   margin-bottom: 0;
   padding-top: 80px;
-  background-image: url(../images/program-background.jpg) !important;
+  background-image: url(../images/program-background.png) !important;
   background-attachment: fixed;
   user-select: none !important;
   -webkit-user-select: none;
@@ -11271,7 +11271,6 @@ body {
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
-  margin-bottom: 5rem;
   user-select: none !important;
 }
 
@@ -11288,6 +11287,21 @@ body {
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
+}
+
+#print_btn {
+  background-image: url("../images/print-icon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  margin: 0 2px;
+  display: inline-block;
+}
+
+.program-img {
+  width: 100%;
 }
 
 .about-section {
