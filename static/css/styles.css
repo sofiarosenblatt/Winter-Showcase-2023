@@ -30,6 +30,31 @@
 
 }
 
+#camps-qr-1 {
+  position: absolute;
+  top: 38%;
+  left: 66%;
+  min-width: 15%;
+}
+
+#camps-qr-2 {
+  position: absolute;
+  top: 86.9%;
+  left: 7.4%;
+  min-width: 15%;
+  border-width: 0.3rem;
+  border-color: #B268C3;
+  border-style: solid;
+}
+
+#camps-link {
+  position: absolute;
+  top: 90%;
+  left: 24%;
+  width: 25%;
+  height: 5%;
+}
+
 @media (max-width: 575px) {
   .home-section {
     background-size: 100% auto !important;
@@ -127,6 +152,11 @@
   .navbar-brand {
     font-size: 4rem !important;
   }
+}
+
+#performancesLabel {
+  max-width: 50%;
+  margin-bottom: 3rem;
 }
 
 .program-section {
@@ -674,6 +704,7 @@ progress {
   margin: 0;
   width: 100%;
   min-width: 70%;
+  position: relative;
 }
 #performances {
   overflow-x: hidden;
@@ -11294,10 +11325,15 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   cursor: pointer;
-  height: 2rem;
-  width: 2rem;
+  height: 5%;
+  width: 5%;
   margin: 0 2px;
   display: inline-block;
+  position: absolute;
+  top: 97%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .program-img {
