@@ -30,24 +30,21 @@
 
 }
 
-#camps-qr-1 {
+#camps-link-1 {
   position: absolute;
   top: 38%;
-  left: 66%;
-  min-width: 15%;
+  left: 65%;
+  width: 17%;
+  height: 12%;
 }
-
-#camps-qr-2 {
+#camps-link-2 {
   position: absolute;
-  top: 86.9%;
-  left: 7.4%;
-  min-width: 15%;
-  border-width: 0.3rem;
-  border-color: #B268C3;
-  border-style: solid;
+  top: 87%;
+  left: 7%;
+  width: 16%;
+  height: 12%;
 }
-
-#camps-link {
+#camps-link-3 {
   position: absolute;
   top: 90%;
   left: 24%;
