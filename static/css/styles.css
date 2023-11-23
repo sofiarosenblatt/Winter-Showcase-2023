@@ -11161,6 +11161,7 @@ body {
   padding-top: 5rem;
   margin-bottom: 0;
   padding-top: 80px;
+  overflow-y: hidden;
   background-image: url(../images/program-background.png) !important;
   background-attachment: fixed;
   user-select: none !important;
