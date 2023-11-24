@@ -52,7 +52,8 @@
   height: 5%;
 }
 
-@media (max-width: 575px) {
+/* @media (max-width: 575px) { */
+@media screen and (orientation: portrait) {
   .home-section {
     background-size: 100% auto !important;
     background-image: url(../images/home-page-vertical-2.jpeg) !important;
@@ -11164,6 +11165,7 @@ body {
   overflow-y: hidden;
   background-image: url(../images/program-background.png) !important;
   background-attachment: fixed;
+  background-repeat: repeat;
   user-select: none !important;
   -webkit-user-select: none;
   -webkit-backface-visibility: hidden !important;
@@ -11177,20 +11179,24 @@ body {
   background-image: url(../images/home-page-horizontal.jpeg);
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover; 
-  display: grid;
+  background-size: cover;
+  justify-content: center;
+  min-height: 80vh;
 }
 
 #home_img {
   max-width: 100%;
+  width: 100%;
 }
 
 .home-container {
   padding-bottom: 10%;
   padding-top: 10%;
   object-fit: contain;
-  max-height: 80%;
-  max-width: 80%;
+  align-items:start;
+  min-height: 80vh;
+  display: flex;
+  position: relative;
 }
 
 @media print {
