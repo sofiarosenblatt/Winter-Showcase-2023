@@ -55,7 +55,7 @@
 /* @media (max-width: 575px) { */
 @media screen and (orientation: portrait) {
   .home-section {
-    background-size: 100% auto !important;
+    background-size: cover !important;
     background-image: url(../images/home-page-vertical-2.jpeg) !important;
     background-color: rgba(254, 254, 254, 0.2);
     background-blend-mode: color;
