@@ -55,10 +55,9 @@
 /* @media (max-width: 575px) { */
 @media screen and (orientation: portrait) {
   .home-section {
-    background-size: cover !important;
+    background-size: 100% auto !important;
     background-image: url(../images/home-page-vertical-2.jpeg) !important;
     background-color: rgba(254, 254, 254, 0.2);
-    background-blend-mode: color;
   }
   #navbar_items_container {
     align-items: start;
@@ -11173,7 +11172,7 @@ body {
 }
 
 .home-section {
-  padding-top: 4rem;
+  padding-top: 2rem;
   user-select: none !important;
   -webkit-user-select: none;
   background-image: url(../images/home-page-horizontal.jpeg);
